@@ -13,23 +13,16 @@ const DashboardLayout = () => {
           <Outlet />
         </div>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side overflow-hidden">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
         {/* <!-- Sidebar content here --> */}
-        <div className="menu p-4 w-80 bg-base-200 text-base-content">
+        <div className="menu w-80 bg-base-200 text-base-content">
           <div>
-            <div className="bg-blue-800 mb-5 sticky top-0">
-              Brand Name
-              <label htmlFor="my-drawer-2">
-                <span>
-                  <i class="ri-arrow-left-line"></i>
-                </span>
-              </label>
-            </div>
+            <div className="bg-gray-400 z-10 py-5 mb-5 sticky top-0">Brand Name</div>
 
             {/* Sidebar menu */}
-            <div className="overflow-y-auto">
+            <div className="p-4">
               <ul>
                 <li>
                   <Link to="/dashboard">Dashboard</Link>
@@ -55,35 +48,6 @@ const DashboardLayout = () => {
                 <li>
                   <Link to="/dashboard/users">Users</Link>
                 </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/users">Users</Link>
-                </li>
-              
-                
                 
               </ul>
             </div>
