@@ -25,7 +25,7 @@ const AuthLayout = ({ children }) => {
               class="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
             relative z-10"
             >
-              <p class="w-full text-4xl font-medium text-center leading-snug font-serif">
+              <p class="w-full text-4xl font-medium text-center leading-snug">
                 Sign up for an account
               </p>
               {children}
