@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-gray-100">
+    <div className="navbar sticky top-0 bg-gray-100">
       <div className="flex-1">
         <label
-          htmlFor="my-drawer-2"
+          htmlFor="dashboard-layout-toggle"
           className="btn btn-secondary drawer-button lg:hidden"
         >
           <i class="ri-menu-2-line"></i>
