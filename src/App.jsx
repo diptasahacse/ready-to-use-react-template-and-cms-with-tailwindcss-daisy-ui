@@ -35,7 +35,7 @@ function App() {
           <Route path="*" element={<DashboardPageNotFound />} />
         </Routes>
       )}
-      {isAuthPage ? (
+      {isAuthPage && (
         <AuthLayout>
           <Routes>
             <Route path="/sign-in" element={<SignIn />} />
@@ -44,7 +44,9 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthLayout>
-      ) : (
+      )}
+
+      {!isAuthPage && !isDashboardPage && (
         <FrontPartLayout>
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -53,19 +55,6 @@ function App() {
           </Routes>
         </FrontPartLayout>
       )}
-
-      {/* {isDashboardPage ? (
-        <Routes>
-          <Route path="/dashboard" element={<DashboardLayout />}>
-            <Route index element={<Dashboard />} />
-            <Route path="users" element={<AllUsers />} />
-            <Route path="profile" element={<DashboardProfile />} />
-          </Route>
-          <Route path="*" element={<DashboardPageNotFound />} />
-        </Routes>
-      ) : (
-        
-      )} */}
     </>
   );
 }
