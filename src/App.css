@@ -1,0 +1,44 @@
+/* 
+Dashboard
+
+
+*/
+:root {
+  --dashboard-item-hover-bg: "#ffffff1a";
+}
+
+/* Scrollbar */
+.sidebar-part ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-part ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-part ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.sidebar-part ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Start dashboard */
+.dashboard-item-hover-bg:hover {
+  background-color: var(--dashboard-item-hover-bg);
+}
+/* Brand logo */
+.brand-logo::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 12px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #13224f;
+}

@@ -6,12 +6,14 @@ const DashboardLayout = () => {
   return (
     <div>
       <div className="flex h-screen">
-        <div>
+        <div className="sidebar-part">
           <Sidebar />
         </div>
         <div className="overflow-y-auto">
           <Navbar />
-          <Outlet />
+          <div className="p-5 bg-gray-400">
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>
