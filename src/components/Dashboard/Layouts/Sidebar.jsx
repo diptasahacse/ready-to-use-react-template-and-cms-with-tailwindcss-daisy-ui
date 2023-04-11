@@ -12,46 +12,120 @@ const Sidebar = () => {
   return (
     <>
       <div
-        class={`sidebar  ${!sideBarOpen && "hidden"} lg:left-0 p-2 ${
+        class={`sidebar  border-r border-[#2c385a]  ${
+          !sideBarOpen && "hidden"
+        } lg:left-0  ${
           !sideBarOpen && "-translate-x-full"
-        } h-screen w-[300px] overflow-y-auto text-center bg-neutral`}
+        } h-screen w-[270px] overflow-y-auto text-center bg-neutral`}
       >
-        <div class="text-gray-100 text-xl">
-          <div class="p-2.5 mt-1 flex items-center">
+        <div className="text-gray-100 text-xl sticky top-0 bg-neutral">
+          <div className="p-2.5 mt-1 flex items-center">
             <span className="brand-logo relative inline-block bg-blue-600 h-5 w-5 rounded-r-lg"></span>
-            <h1 class="font-bold text-[#c4c8d3] text-[15px] ml-3">
+            <h1 className="font-bold text-[#c4c8d3] text-[15px] ml-3">
               Dipta Theme
             </h1>
             <i
-              class="ri-arrow-left-line cursor-pointer ml-28 lg:hidden"
+              className="ri-arrow-left-line cursor-pointer ml-28 lg:hidden"
               onClick={() => dispatch(toggleDashboard())}
             ></i>
           </div>
-          <div class="my-2 bg-gray-600 h-[1px]"></div>
+          <div className="my-2 bg-[#2c385a] h-[1px]"></div>
         </div>
-        
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
-          <i class="ri-speed-up-line"></i>
-          <span class="text-[15px] ml-4 text-[#c4c8d3] font-bold">Dashboard</span>
-        </div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
-          <i class="ri-admin-line"></i>
-          <span class="text-[15px] ml-4 text-[#c4c8d3] font-bold">Admin</span>
-        </div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
-          <i class="ri-user-fill"></i>
-          <span class="text-[15px] ml-4 text-[#c4c8d3] font-bold">Users</span>
-        </div>
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
-          <i class="ri-service-line"></i>
-          <span class="text-[15px] ml-4 text-[#c4c8d3] font-bold">Products</span>
-        </div>
-        <div class="my-4 bg-gray-600 h-[1px]"></div>
-      
-       
-        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-error">
-          <i class="ri-logout-circle-line"></i>
-          <span class="text-[15px] ml-4 text-error font-bold">Logout</span>
+        <div className="p-2">
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-speed-up-line"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Dashboard
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-admin-line"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Admin
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-user-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Users
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-service-line"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Products
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-[#ffffff1a] text-[#c4c8d3]">
+            <i className="ri-settings-3-fill"></i>
+            <span className="text-[15px] ml-4 text-[#c4c8d3] font-bold">
+              Settings
+            </span>
+          </div>
+
+          <div>
+            <div className="my-4 bg-[#2c385a] h-[1px]"></div>
+            <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer text-error">
+              <i className="ri-logout-circle-line"></i>
+              <span className="text-[15px] ml-4 text-error font-bold">
+                Logout
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </>

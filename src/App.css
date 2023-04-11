@@ -7,22 +7,26 @@ Dashboard
   --dashboard-item-hover-bg: "#ffffff1a";
 }
 
+#main-database-layout a{
+    color: white;
+    
+}
 /* Scrollbar */
-.sidebar-part ::-webkit-scrollbar {
-  width: 8px;
-}
+#main-database-layout ::-webkit-scrollbar {
+    width: 7px;
+  }
+  #main-database-layout ::-webkit-scrollbar-track {
+    background: #13224f;
+  }
+ 
 
-.sidebar-part ::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.sidebar-part ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
+  #main-database-layout ::-webkit-scrollbar-thumb {
+  background: #ffffff30;
   border-radius: 20px;
 }
 
-.sidebar-part ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.2);
+#main-database-layout ::-webkit-scrollbar-thumb:hover {
+  background: transparent;
 }
 
 /* Start dashboard */
