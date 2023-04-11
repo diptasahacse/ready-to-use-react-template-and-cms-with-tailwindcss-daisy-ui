@@ -23,7 +23,7 @@ const Sidebar = () => {
               TailwindCSS
             </h1>
             <i
-              class="ri-menu-3-line cursor-pointer ml-28 lg:hidden"
+              class="ri-arrow-left-line cursor-pointer ml-28 lg:hidden"
               onClick={() => setSideBarOpen(!sideBarOpen)}
             ></i>
           </div>
