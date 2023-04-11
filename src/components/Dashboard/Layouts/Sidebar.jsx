@@ -1,20 +1,20 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDashboard } from "../../../../redux/actionCreators/dashboardActions";
 
 const Sidebar = () => {
-  const [sideBarOpen, setSideBarOpen] = useState(true);
-  console.log(sideBarOpen);
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+  const {
+    dashboard: { sideBarOpen },
+  } = state;
+
   return (
     <>
-      <span
-        class="absolute text-white text-4xl top-5 right-4 cursor-pointer"
-        onClick={() => setSideBarOpen(!sideBarOpen)}
-      >
-        <i class="ri-menu-3-line px-2 bg-gray-900 rounded-md"></i>
-      </span>
       <div
-        class={`sidebar fixed ${
-          !sideBarOpen && "hidden"
-        } top-0 bottom-0 lg:left-0 p-2 ${!sideBarOpen && "-translate-x-full"} w-[300px] overflow-y-auto text-center bg-gray-900`}
+        class={`sidebar  ${!sideBarOpen && "hidden"} lg:left-0 p-2 ${
+          !sideBarOpen && "-translate-x-full"
+        } h-screen w-[300px] overflow-y-auto text-center bg-gray-900`}
       >
         <div class="text-gray-100 text-xl">
           <div class="p-2.5 mt-1 flex items-center">
@@ -24,7 +24,7 @@ const Sidebar = () => {
             </h1>
             <i
               class="ri-arrow-left-line cursor-pointer ml-28 lg:hidden"
-              onClick={() => setSideBarOpen(!sideBarOpen)}
+              onClick={() => dispatch(toggleDashboard())}
             ></i>
           </div>
           <div class="my-2 bg-gray-600 h-[1px]"></div>

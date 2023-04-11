@@ -5,9 +5,14 @@ import Sidebar from "./Sidebar";
 const DashboardLayout = () => {
   return (
     <div>
-      <div>
-        <Sidebar />
-        <Outlet/>
+      <div className="flex h-screen">
+        <div>
+          <Sidebar />
+        </div>
+        <div className="overflow-y-auto">
+          <Navbar />
+          <Outlet />
+        </div>
       </div>
     </div>
   );

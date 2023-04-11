@@ -14,6 +14,8 @@ import SignIn from "./components/FrontPart/Pages/signIn";
 import Register from "./components/FrontPart/Pages/register";
 import AuthLayout from "./components/FrontPart/Layouts/AuthLayout";
 import ResetPassword from "./components/FrontPart/Pages/resetPassword";
+import { Provider } from "react-redux";
+import store from "../redux/store";
 
 function App() {
   const location = useLocation();
@@ -25,36 +27,38 @@ function App() {
 
   return (
     <>
-      {isDashboardPage && (
-        <Routes>
-          <Route path="/dashboard" element={<DashboardLayout />}>
-            <Route index element={<Dashboard />} />
-            <Route path="users" element={<AllUsers />} />
-            <Route path="profile" element={<DashboardProfile />} />
-          </Route>
-          <Route path="*" element={<DashboardPageNotFound />} />
-        </Routes>
-      )}
-      {isAuthPage && (
-        <AuthLayout>
+      <Provider store={store}>
+        {isDashboardPage && (
           <Routes>
-            <Route path="/sign-in" element={<SignIn />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/forget-password" element={<ResetPassword />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/dashboard" element={<DashboardLayout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="users" element={<AllUsers />} />
+              <Route path="profile" element={<DashboardProfile />} />
+            </Route>
+            <Route path="*" element={<DashboardPageNotFound />} />
           </Routes>
-        </AuthLayout>
-      )}
+        )}
+        {isAuthPage && (
+          <AuthLayout>
+            <Routes>
+              <Route path="/sign-in" element={<SignIn />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/forget-password" element={<ResetPassword />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </AuthLayout>
+        )}
 
-      {!isAuthPage && !isDashboardPage && (
-        <FrontPartLayout>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </FrontPartLayout>
-      )}
+        {!isAuthPage && !isDashboardPage && (
+          <FrontPartLayout>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </FrontPartLayout>
+        )}
+      </Provider>
     </>
   );
 }
