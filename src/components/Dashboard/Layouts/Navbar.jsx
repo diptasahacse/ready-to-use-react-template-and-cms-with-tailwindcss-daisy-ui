@@ -32,7 +32,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-neutral border border-[#f1f5f90d] rounded-box w-52"
+            className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-neutral border border-[#f1f5f90d] rounded-box z-50 w-52"
           >
             <li>
               <Link to="profile">Profile</Link>
