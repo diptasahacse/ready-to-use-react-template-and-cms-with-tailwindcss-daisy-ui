@@ -13,11 +13,11 @@ const Navbar = () => {
     <div className="navbar sticky border-b border-[#f1f5f90d] top-0 bg-neutral">
       <div className="flex-1">
         <span
-          class=" text-2xl cursor-pointer"
+          className=" text-2xl cursor-pointer"
           onClick={() => dispatch(toggleDashboard())}
         >
           <i
-            class={`${
+            className={`${
               sideBarOpen ? "ri-menu-fold-line" : "ri-menu-unfold-line"
             } px-2 text-gray-400 rounded-md`}
           ></i>

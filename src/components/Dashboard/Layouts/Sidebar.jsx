@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        class={`sidebar  border-r border-[#f1f5f90d]  ${
+        className={`sidebar  border-r border-[#f1f5f90d]  ${
           !sideBarOpen && "hidden"
         } lg:left-0  ${
           !sideBarOpen && "-translate-x-full"
