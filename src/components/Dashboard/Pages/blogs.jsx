@@ -8,40 +8,57 @@ const Blogs = () => {
         <PageTitle title="Blogs" />
       </div>
       <div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto w-full">
           <table className="table w-full">
             {/* head */}
             <thead>
               <tr>
-                <th></th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
+                <th>
+                  <label>
+                    <input type="checkbox" className="checkbox" />
+                  </label>
+                </th>
+                <th>Post Name</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
               {/* row 1 */}
               <tr>
-                <th>1</th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Blue</td>
+                <th>
+                  <label>
+                    <input type="checkbox" className="checkbox" />
+                  </label>
+                </th>
+                <td>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <div className="font-bold">
+                      How to do that type of things.?
+                    </div>
+                  </div>
+                </td>
+                <td className="text-gray-300">
+                  Jan 3, 2023
+                </td>
+                <td className="text-gray-300">Jan 26, 2023</td>
+                <th>
+                  <button className="btn btn-ghost btn-xs">details</button>
+                </th>
               </tr>
-              {/* row 2 */}
-              <tr className="hover">
-                <th>2</th>
-                <td>Hart Hagerty</td>
-                <td>Desktop Support Technician</td>
-                <td>Purple</td>
-              </tr>
-              {/* row 3 */}
-              <tr>
-                <th>3</th>
-                <td>Brice Swyre</td>
-                <td>Tax Accountant</td>
-                <td>Red</td>
-              </tr>
+              
             </tbody>
+            {/* foot */}
+            <tfoot>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Favorite Color</th>
+                <th></th>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

@@ -56,7 +56,17 @@ Dashboard
   border-bottom-right-radius: 10px;
   background-color: #13224f;
 }
+#main-database-layout .table :where(thead, tfoot) :where(th, td){
+  background-color: #091945;
 
+}
+#main-database-layout .table :where(tbody th, tbody td){
+  background-color: #1b2648e7;
+}
+#main-database-layout .checkbox{
+  border-color: #173cac;
+
+}
 /* 
 Front Part
 

@@ -10,7 +10,7 @@ const Navbar = () => {
     dashboard: { sideBarOpen },
   } = state;
   return (
-    <div className="navbar sticky border-b border-[#f1f5f90d] top-0 bg-neutral">
+    <div className="navbar sticky border-b border-[#f1f5f90d] z-50 top-0 bg-neutral">
       <div className="flex-1">
         <span
           className=" text-2xl cursor-pointer"
