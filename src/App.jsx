@@ -16,6 +16,7 @@ import ResetPassword from "./components/FrontPart/Pages/resetPassword";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 import ProfileSettings from "./components/Dashboard/Pages/profileSettings";
+import Blogs from "./components/Dashboard/Pages/blogs";
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
               <Route path="users" element={<AllUsers />} />
               <Route path="profile" element={<DashboardProfile />} />
               <Route path="settings" element={<ProfileSettings />} />
+              <Route path="blogs" element={<Blogs />} />
             </Route>
             <Route path="*" element={<DashboardPageNotFound />} />
           </Routes>

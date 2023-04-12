@@ -14,8 +14,13 @@ Dashboard
   --front-bg: #111827;
 }
 
+#main-database-layout {
+ 
+  background-color: #13224f;
+}
 #main-database-layout a {
   color: white;
+  background-color: #13224f;
 }
 /* Scrollbar */
 #main-database-layout ::-webkit-scrollbar {
