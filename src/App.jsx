@@ -4,7 +4,6 @@ import "./App.css";
 import DashboardLayout from "./components/Dashboard/Layouts/DashboardLayout";
 import FrontPartLayout from "./components/FrontPart/Layouts/FrontPartLayout";
 import Home from "./components/FrontPart/Pages/home";
-import About from "./components/FrontPart/Pages/about";
 import NotFound from "./components/FrontPart/Pages/notFound";
 import Dashboard from "./components/Dashboard/Pages/dashboard";
 import DashboardProfile from "./components/Dashboard/Pages/profile";
@@ -16,6 +15,7 @@ import AuthLayout from "./components/FrontPart/Layouts/AuthLayout";
 import ResetPassword from "./components/FrontPart/Pages/resetPassword";
 import { Provider } from "react-redux";
 import store from "../redux/store";
+import ProfileSettings from "./components/Dashboard/Pages/profileSettings";
 
 function App() {
   const location = useLocation();
@@ -34,6 +34,7 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path="users" element={<AllUsers />} />
               <Route path="profile" element={<DashboardProfile />} />
+              <Route path="settings" element={<ProfileSettings />} />
             </Route>
             <Route path="*" element={<DashboardPageNotFound />} />
           </Routes>
@@ -53,7 +54,6 @@ function App() {
           <FrontPartLayout>
             <Routes>
               <Route exact path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </FrontPartLayout>

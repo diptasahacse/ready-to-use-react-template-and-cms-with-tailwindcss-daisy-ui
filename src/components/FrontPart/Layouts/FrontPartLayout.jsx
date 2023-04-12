@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const FrontPartLayout = ({ children }) => {
   return (
-    <div>
+    <div id="front-part">
       <Header />
       {children}
       <Footer />

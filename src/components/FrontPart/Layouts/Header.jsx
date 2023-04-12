@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="navbar bg-base-200">
+    <div className="navbar z-10 sticky top-0 bg-[#1d1b31]">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -56,15 +56,15 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btb-info normal-case text-xl">Dipta Saha</a>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu text-gray-200 menu-horizontal px-1">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/sign-in">Login</Link>
           </li>
           <li>
             <Link to="/dashboard">Dashboard</Link>

@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 const AuthLayout = ({ children }) => {
   return (
-    <div class="bg-white relative lg:py-10">
-        <Link className="btn btn-primary" to="/">
-        Home
-        </Link>
+    <div class="bg-white relative lg:py-3">
       <div
         class="flex flex-col items-center justify-between pt-0 pr-10 pb-0 pl-10 mt-0 mr-auto mb-0 ml-auto max-w-7xl
       xl:px-5 lg:flex-row"
@@ -29,6 +26,13 @@ const AuthLayout = ({ children }) => {
                 Sign up for an account
               </p>
               {children}
+
+              <div className="w-full text-center">
+                <Link className="btn btn-neutral  text-gray-300 btn-sm" to="/">
+                  <span><i class="ri-corner-down-left-fill"></i></span>
+                  Back to the Home
+                </Link>
+              </div>
             </div>
             <svg
               viewbox="0 0 91 91"

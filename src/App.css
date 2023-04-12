@@ -5,22 +5,27 @@ Dashboard
 */
 :root {
   --dashboard-item-hover-bg: "#ffffff1a";
+
+
+
+
+
+  /* Front part */
+  --front-bg: #111827;
 }
 
-#main-database-layout a{
-    color: white;
-    
+#main-database-layout a {
+  color: white;
 }
 /* Scrollbar */
 #main-database-layout ::-webkit-scrollbar {
-    width: 7px;
-  }
-  #main-database-layout ::-webkit-scrollbar-track {
-    background: #13224f;
-  }
- 
+  width: 7px;
+}
+#main-database-layout ::-webkit-scrollbar-track {
+  background: #13224f;
+}
 
-  #main-database-layout ::-webkit-scrollbar-thumb {
+#main-database-layout ::-webkit-scrollbar-thumb {
   background: #ffffff30;
   border-radius: 20px;
 }
@@ -45,4 +50,12 @@ Dashboard
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #13224f;
+}
+
+/* 
+Front Part
+
+*/
+#front-part {
+  background-color: var(--front-bg);
 }
