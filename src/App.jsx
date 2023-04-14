@@ -34,7 +34,7 @@ function App() {
       ],
     },
     {
-      path: "/",
+      path: "",
       element: <AuthLayout />,
       children: [
         {
