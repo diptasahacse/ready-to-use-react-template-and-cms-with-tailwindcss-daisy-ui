@@ -1,8 +1,7 @@
-import React, { Children } from "react";
-import { Link, Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
+import React from "react";
 import DashboardContent from "./DashboardContent";
+import Sidebar from "./Sidebar";
+
 const DashboardLayout = () => {
   return (
     <div className="drawer drawer-mobile">
@@ -17,7 +16,10 @@ const DashboardLayout = () => {
           htmlFor="dashboard-toggle-button"
           className="drawer-overlay"
         ></label>
-        <div id="dashboard-sidebar" className="  w-80 bg-secondary text-base-content">
+        <div
+          id="dashboard-sidebar"
+          className="  w-80 bg-secondary text-base-content"
+        >
           <Sidebar />
         </div>
       </div>

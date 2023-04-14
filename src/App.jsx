@@ -1,21 +1,20 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "remixicon/fonts/remixicon.css";
 import "./App.css";
-import DashboardLayout from "./components/Dashboard/Layouts/DashboardLayout";
 import FrontPartLayout from "./components/FrontPart/Layouts/FrontPartLayout";
-import Dashboard from "./components/Dashboard/Pages/Dashboard";
-import DashboardProfile from "./components/Dashboard/Pages/Profile";
-import AllUsers from "./components/Dashboard/Pages/Users";
-import DashboardPageNotFound from "./components/Dashboard/Pages/DashboardPageNotFound";
+import Home from "./components/FrontPart/Pages/Home";
+import Blogs from "./components/FrontPart/Pages/Blogs";
+import AuthLayout from "./components/FrontPart/Layouts/AuthLayout";
 import SignIn from "./components/FrontPart/Pages/SinIn";
 import Register from "./components/FrontPart/Pages/Register";
-import AuthLayout from "./components/FrontPart/Layouts/AuthLayout";
 import ResetPassword from "./components/FrontPart/Pages/resetPassword";
-import ProfileSettings from "./components/Dashboard/Pages/ProfileSettings";
-import DashboardBlogs from "./components/Dashboard/Pages/Blogs";
-import Blogs from "./components/FrontPart/Pages/Blogs";
-import UserDetails from "./components/FrontPart/Components/components/UserDetails";
-import Home from "./components/FrontPart/Pages/Home";
+import DashboardLayout from "./components/Dashboard/Layouts/DashboardLayout";
+import Dashboard from "./components/Dashboard/Pages/Dashboard";
+import DashboardProfile from "./components/Dashboard/Pages/profile";
+import ProfileSettings from "./components/Dashboard/Pages/profileSettings";
+import DashboardBlogs from "./components/Dashboard/Pages/blogs";
+import AllUsers from "./components/Dashboard/Pages/users";
+import DashboardPageNotFound from "./components/Dashboard/Pages/DashboardPageNotFound";
 import NotFound from "./components/FrontPart/Pages/NotFound";
 
 function App() {
@@ -31,17 +30,12 @@ function App() {
         {
           path: "blogs",
           element: <Blogs />,
-          // loader: async()=>{
-          //   return fetch("https://jsonplaceholder.typicode.com/users")
-          // }
         },
-        {
-          path: "/blogs/:userId",
-          element: <UserDetails />,
-          // loader: async({params})=>{
-          //   return fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`)
-          // }
-        },
+        // {
+        //   path: "/blogs/:userId",
+        //   element: <UserDetails />,
+
+        // },
       ],
     },
     {
