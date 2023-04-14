@@ -7,7 +7,7 @@ export default {
   daisyui: {
     themes: [
       {
-        readyToUse: {
+        mytheme: {
           primary: "#13224f",
           secondary: "#091945",
           accent: "#091945",
