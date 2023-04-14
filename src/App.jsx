@@ -1,13 +1,8 @@
-import {
-  RouterProvider,
-  createBrowserRouter,
-
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "remixicon/fonts/remixicon.css";
 import "./App.css";
 import DashboardLayout from "./components/Dashboard/Layouts/DashboardLayout";
 import FrontPartLayout from "./components/FrontPart/Layouts/FrontPartLayout";
-import NotFound from "./components/FrontPart/Pages/NotFound";
 import Dashboard from "./components/Dashboard/Pages/Dashboard";
 import DashboardProfile from "./components/Dashboard/Pages/Profile";
 import AllUsers from "./components/Dashboard/Pages/Users";
@@ -21,10 +16,9 @@ import DashboardBlogs from "./components/Dashboard/Pages/Blogs";
 import Blogs from "./components/FrontPart/Pages/Blogs";
 import UserDetails from "./components/FrontPart/Components/components/UserDetails";
 import Home from "./components/FrontPart/Pages/Home";
+import NotFound from "./components/FrontPart/Pages/NotFound";
 
 function App() {
- 
-
   const router = createBrowserRouter([
     {
       path: "/",
