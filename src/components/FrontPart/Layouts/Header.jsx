@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation()
+  console.log()
   return (
     <div className="navbar z-10 sticky top-0 bg-[#1d1b31]">
       <div className="navbar-start">
@@ -61,10 +63,10 @@ const Header = () => {
       <div className="navbar-end hidden lg:flex">
         <ul className="menu text-gray-200 menu-horizontal px-1">
           <li>
-            <Link to="/">Home</Link>
+            <Link className={`${location.pathname === '/' && 'active'}`} to="/">Home</Link>
           </li>
           <li>
-            <Link to="/blogs">Blogs</Link>
+            <Link className={`${location.pathname === '/blogs' && 'active'}`}  to="/blogs">Blogs</Link>
           </li>
           <li>
             <Link to="/sign-in">Login</Link>

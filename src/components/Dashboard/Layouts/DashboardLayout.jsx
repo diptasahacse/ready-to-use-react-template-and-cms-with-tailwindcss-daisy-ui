@@ -2,18 +2,23 @@ import React, { Children } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import DashboardContent from "./DashboardContent";
 const DashboardLayout = () => {
   return (
-    <div id="main-database-layout">
-      <div className="flex h-screen">
-        <div className="sidebar-part">
+    <div className="drawer drawer-mobile">
+      <input
+        id="dashboard-toggle-button"
+        type="checkbox"
+        className="drawer-toggle"
+      />
+      <DashboardContent />
+      <div className="drawer-side">
+        <label
+          htmlFor="dashboard-toggle-button"
+          className="drawer-overlay"
+        ></label>
+        <div id="dashboard-sidebar" className="  w-80 bg-secondary text-base-content">
           <Sidebar />
-        </div>
-        <div className="overflow-y-auto overflow-x-hidden w-full">
-          <Navbar />
-          <div className="p-5 bg-neutral">
-            <Outlet />
-          </div>
         </div>
       </div>
     </div>

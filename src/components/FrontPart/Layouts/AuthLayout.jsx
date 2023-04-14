@@ -1,9 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
-const AuthLayout = ({ children }) => {
+const AuthLayout = () => {
+  const { pathname } = useLocation();
+
+  let title = "loading";
+  if (pathname === "/register") {
+    title = "Sign up for an account";
+  }
+  if (pathname === "/sign-in") {
+    title = "Sign In";
+  }
+  if (pathname === "/forget-password") {
+    title = "Reset your password";
+  }
+
   return (
-    <div className="bg-white relative lg:py-3">
+    <div className="bg-base-100 relative text-white">
       <div
         className="flex flex-col items-center justify-between pt-0 pr-10 pb-0 pl-10 mt-0 mr-auto mb-0 ml-auto max-w-7xl
       xl:px-5 lg:flex-row"
@@ -11,32 +24,31 @@ const AuthLayout = ({ children }) => {
         <div className="flex flex-col items-center w-full pt-5 pr-10 pb-20 pl-10 lg:pt-20 lg:flex-row">
           <div className="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
             <div className="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
-              <img
-                src="https://res.cloudinary.com/macxenon/image/upload/v1631570592/Run_-_Health_qcghbu.png"
-                className="btn-"
-              />
+              <img src="/images/auth.png" className="h-4/6" />
             </div>
           </div>
           <div className="w-full mt-20 mr-0 mb-0 ml-0 relative z-10 max-w-2xl lg:mt-0 lg:w-5/12">
             <div
-              className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-white shadow-2xl rounded-xl
+              className="flex flex-col items-start justify-start pt-10 pr-10 pb-10 pl-10 bg-secondary shadow-2xl rounded-xl
             relative z-10"
             >
-              <p className="w-full text-4xl font-medium text-center leading-snug">
-                Sign up for an account
+              <p className="w-full text-4xl font-medium leading-snug">
+                {title}
               </p>
-              {children}
+              <Outlet />
 
               <div className="w-full text-center">
-                <Link className="btn btn-neutral  text-gray-300 btn-sm" to="/">
-                  <span><i className="ri-corner-down-left-fill"></i></span>
+                <Link className="btn btn-neutral  text-gray-200 btn-sm" to="/">
+                  <span>
+                    <i className="ri-corner-down-left-fill"></i>
+                  </span>
                   Back to the Home
                 </Link>
               </div>
             </div>
             <svg
               viewBox="0 0 91 91"
-              className="absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-yellow-300
+              className="absolute up-down-animation top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-yellow-300
             fill-current"
             >
               <g stroke="none" strokeWidth="1" fillRule="evenodd">
@@ -128,7 +140,7 @@ const AuthLayout = ({ children }) => {
             </svg>
             <svg
               viewBox="0 0 91 91"
-              className="absolute bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-indigo-500
+              className="absolute up-down-animation bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-indigo-500
             fill-current"
             >
               <g stroke="none" strokeWidth="1" fillRule="evenodd">

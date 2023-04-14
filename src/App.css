@@ -1,76 +1,23 @@
 /* 
 Dashboard
 
-
-*/
-:root {
-  --dashboard-item-hover-bg: "#ffffff1a";
-
-
-
-
-
-  /* Front part */
-  --front-bg: #111827;
-}
-
-#main-database-layout {
- 
-  background-color: #13224f;
-}
-#main-database-layout a {
-  color: white;
-  background-color: #13224f;
-}
 /* Scrollbar */
-#main-database-layout ::-webkit-scrollbar {
-  width: 7px;
+::-webkit-scrollbar {
+  width: 5px;
 }
-#main-database-layout ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #13224f;
 }
 
-#main-database-layout ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #ffffff30;
   border-radius: 20px;
 }
 
-#main-database-layout ::-webkit-scrollbar-thumb:hover {
-  background: transparent;
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff36;
 }
 
-/* Start dashboard */
-.dashboard-item-hover-bg:hover {
-  background-color: var(--dashboard-item-hover-bg);
-}
-/* Brand logo */
-.brand-logo::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 12px;
-  width: 12px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: #13224f;
-}
-#main-database-layout .table :where(thead, tfoot) :where(th, td){
-  background-color: #091945;
-
-}
-#main-database-layout .table :where(tbody th, tbody td){
-  background-color: #1b2648e7;
-}
-#main-database-layout .checkbox{
-  border-color: #173cac;
-
-}
-/* 
-Front Part
-
-*/
-#front-part {
-  background-color: var(--front-bg);
+/* Animation */
+.up-down-animation {
 }
