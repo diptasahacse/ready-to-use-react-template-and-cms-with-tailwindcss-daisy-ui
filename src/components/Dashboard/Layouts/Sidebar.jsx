@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleDashboard } from "../../../../redux/actionCreators/dashboardActions";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
