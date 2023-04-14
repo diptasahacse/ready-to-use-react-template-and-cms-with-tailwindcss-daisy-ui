@@ -7,15 +7,15 @@ import Blogs from "./components/FrontPart/Pages/Blogs";
 import AuthLayout from "./components/FrontPart/Layouts/AuthLayout";
 import SignIn from "./components/FrontPart/Pages/SinIn";
 import Register from "./components/FrontPart/Pages/Register";
-import ResetPassword from "./components/FrontPart/Pages/resetPassword";
 import DashboardLayout from "./components/Dashboard/Layouts/DashboardLayout";
 import Dashboard from "./components/Dashboard/Pages/Dashboard";
-import DashboardProfile from "./components/Dashboard/Pages/profile";
-import ProfileSettings from "./components/Dashboard/Pages/profileSettings";
-import DashboardBlogs from "./components/Dashboard/Pages/blogs";
-import AllUsers from "./components/Dashboard/Pages/users";
 import DashboardPageNotFound from "./components/Dashboard/Pages/DashboardPageNotFound";
 import NotFound from "./components/FrontPart/Pages/NotFound";
+import PasswordReset from "./components/FrontPart/Pages/PasswordReset";
+import DashboardProfile from "./components/Dashboard/Pages/DashboardProfile";
+import DashboardProfileSettings from "./components/Dashboard/Pages/DashboardProfileSettings";
+import DashboardBlogs from "./components/Dashboard/Pages/DashboardBlogs";
+import AllUsers from "./components/Dashboard/Pages/AllUsers";
 
 function App() {
   const router = createBrowserRouter([
@@ -31,11 +31,6 @@ function App() {
           path: "blogs",
           element: <Blogs />,
         },
-        // {
-        //   path: "/blogs/:userId",
-        //   element: <UserDetails />,
-
-        // },
       ],
     },
     {
@@ -52,7 +47,7 @@ function App() {
         },
         {
           path: "/forget-password",
-          element: <ResetPassword />,
+          element: <PasswordReset />,
         },
       ],
     },
@@ -70,7 +65,7 @@ function App() {
         },
         {
           path: "/dashboard/profile-settings",
-          element: <ProfileSettings />,
+          element: <DashboardProfileSettings />,
         },
         {
           path: "/dashboard/blogs",

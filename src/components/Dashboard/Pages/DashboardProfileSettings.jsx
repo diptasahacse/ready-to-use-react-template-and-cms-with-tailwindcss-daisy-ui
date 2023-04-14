@@ -1,7 +1,7 @@
 import React from 'react'
 import PageTitle from '../Components/PageTitle'
 
-const ProfileSettings = () => {
+const DashboardProfileSettings = () => {
   return (
     <div>
       <div>
@@ -14,4 +14,4 @@ const ProfileSettings = () => {
   )
 }
 
-export default ProfileSettings
+export default DashboardProfileSettings

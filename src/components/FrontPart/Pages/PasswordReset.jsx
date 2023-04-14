@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ResetPassword = () => {
+const PasswordReset = () => {
   return (
     <div className="w-full py-5">
       <form>
@@ -15,8 +15,7 @@ const ResetPassword = () => {
             className="input input-bordered"
           />
         </div>
-        
-        
+
         <div className="form-control mt-5">
           <button type="submit" className="btn btn-danger">
             Send Reset Link
@@ -34,4 +33,4 @@ const ResetPassword = () => {
   );
 };
 
-export default ResetPassword;
+export default PasswordReset;
