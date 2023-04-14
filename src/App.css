@@ -20,4 +20,34 @@ Dashboard
 
 /* Animation */
 .up-down-animation {
+  animation: up-down-animation 5s linear infinite;
+}
+@keyframes up-down-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+.left-right-animation {
+  animation: left-right-animation 5s linear infinite;
+}
+@keyframes left-right-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }

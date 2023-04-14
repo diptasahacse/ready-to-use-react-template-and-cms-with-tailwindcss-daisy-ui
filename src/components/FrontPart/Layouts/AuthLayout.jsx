@@ -140,7 +140,7 @@ const AuthLayout = () => {
             </svg>
             <svg
               viewBox="0 0 91 91"
-              className="absolute up-down-animation bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-indigo-500
+              className="absolute left-right-animation bottom-0 right-0 z-0 w-32 h-32 -mb-12 -mr-12 text-indigo-500
             fill-current"
             >
               <g stroke="none" strokeWidth="1" fillRule="evenodd">
