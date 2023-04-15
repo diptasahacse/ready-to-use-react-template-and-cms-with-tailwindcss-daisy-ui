@@ -3,20 +3,25 @@ import "remixicon/fonts/remixicon.css";
 import "./App.css";
 import FrontPartLayout from "./components/FrontPart/Layouts/FrontPartLayout";
 
-import Blogs from "./components/FrontPart/Pages/Blogs";
+
 import AuthLayout from "./components/FrontPart/Layouts/AuthLayout";
+
+import DashboardLayout from "./components/Dashboard/Layouts/DashboardLayout";
+
+
+
+
+import Home from "./components/FrontPart/Pages/Home";
+import Blogs from "./components/FrontPart/Pages/Blogs";
 import SignIn from "./components/FrontPart/Pages/SinIn";
 import Register from "./components/FrontPart/Pages/Register";
-import DashboardLayout from "./components/Dashboard/Layouts/DashboardLayout";
-import Dashboard from "./components/Dashboard/Pages/Dashboard";
-import DashboardPageNotFound from "./components/Dashboard/Pages/DashboardPageNotFound";
-import NotFound from "./components/FrontPart/Pages/NotFound";
 import PasswordReset from "./components/FrontPart/Pages/PasswordReset";
+import Dashboard from "./components/Dashboard/Pages/Dashboard";
 import DashboardProfile from "./components/Dashboard/Pages/DashboardProfile";
 import DashboardProfileSettings from "./components/Dashboard/Pages/DashboardProfileSettings";
 import DashboardBlogs from "./components/Dashboard/Pages/DashboardBlogs";
 import AllUsers from "./components/Dashboard/Pages/AllUsers";
-import Home from "./components/FrontPart/Pages/Home";
+import NotFound from "./components/FrontPart/Pages/NotFound";
 
 function App() {
   const router = createBrowserRouter([
@@ -76,10 +81,7 @@ function App() {
           path: "/dashboard/users",
           element: <AllUsers />,
         },
-        {
-          path: "/dashboard/*",
-          element: <DashboardPageNotFound />,
-        },
+        
       ],
     },
     {
