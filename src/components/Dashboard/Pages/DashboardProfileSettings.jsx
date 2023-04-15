@@ -1,5 +1,5 @@
 import React from 'react'
-import PageTitle from '../Components/PageTitle'
+import PageTitle from '../DashboardComponents/PageTitle'
 
 const DashboardProfileSettings = () => {
   return (
