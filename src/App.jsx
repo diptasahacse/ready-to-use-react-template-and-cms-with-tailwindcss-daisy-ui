@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "remixicon/fonts/remixicon.css";
 import "./App.css";
 import FrontPartLayout from "./components/FrontPart/Layouts/FrontPartLayout";
-import Home from "./components/FrontPart/Pages/Home";
+
 import Blogs from "./components/FrontPart/Pages/Blogs";
 import AuthLayout from "./components/FrontPart/Layouts/AuthLayout";
 import SignIn from "./components/FrontPart/Pages/SinIn";
@@ -16,6 +16,7 @@ import DashboardProfile from "./components/Dashboard/Pages/DashboardProfile";
 import DashboardProfileSettings from "./components/Dashboard/Pages/DashboardProfileSettings";
 import DashboardBlogs from "./components/Dashboard/Pages/DashboardBlogs";
 import AllUsers from "./components/Dashboard/Pages/AllUsers";
+import Home from "./components/FrontPart/Pages/Home";
 
 function App() {
   const router = createBrowserRouter([
